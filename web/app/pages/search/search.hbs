@@ -1,0 +1,23 @@
+{{#if titles}}
+<shelf>
+  <header>
+    <title>Results</title>
+  </header>
+  <section id="Results">
+  {{#each titles}}
+    <lockup>
+      <img src="{{ image }}" width="350" height="520" />
+      <title>{{ name }}</title>
+    </lockup>
+  {{/each}}
+  </section>
+</shelf>
+{{else}}
+<list>
+  <section>
+    <header>
+      <title>No Results</title>
+    </header>
+  </section>
+</list>
+{{/if}}

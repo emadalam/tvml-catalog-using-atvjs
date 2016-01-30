@@ -1,0 +1,134 @@
+.imageWithGradient {
+    tv-tint-color: linear-gradient(top, 0.33, transparent, 0.66, rgba(0, 64, 0, 0.7), rgba(0, 64, 0, 1.0));
+}
+
+.showTextOnHighlight {
+    tv-text-highlight-style: show-on-highlight;
+}
+
+.showLabelOnHighlight {
+    tv-labels-state: show-on-highlight;
+}
+
+.scrollTextOnHighlight {
+    tv-text-highlight-style: marquee-on-highlight;
+}
+
+.showAndScrollTextOnHighlight {
+    tv-text-highlight-style: marquee-and-show-on-highlight;
+}
+
+.darkBackgroundColor {
+    background-color: #091a2a;
+}
+
+.lightBackgroundColor {
+    background-color: #e49c36;
+}
+
+.whiteBadge {
+    tv-tint-color: rgb(255, 255, 255);
+}
+
+.shelfLayout {
+    padding: 20 90 50;
+}
+
+.shelfLayout2 {
+    padding: 40 90;
+}
+
+.overlayTextLayout {
+    tv-position: top;
+}
+
+.centeredText {
+    text-align: center;
+}
+
+.whiteText {
+    color: rgb(255, 255, 255);
+}
+
+.ordinalLayout {
+    margin: 8 0 0 9;
+}
+
+.whiteButton {
+    tv-tint-color: rgb(255, 255, 255);
+}
+
+.longDescriptionLayout {
+    max-width: 1280;
+}
+
+.descriptionLayout {
+    tv-text-max-lines: 8;
+}
+
+.customRightTextImage {
+    itml-position: right;
+    margin: 0 20;
+}
+
+.customRightText {
+    font-size: 26pt;
+    font-weight: normal;
+    color: rgba(0, 0, 0, 0.6);
+    text-align: right;
+    itml-text-max-lines: 1;
+    margin: 0 20;
+}
+
+.customRow {
+    itml-position: center;
+}
+
+.customRowText {
+    font-size: 26pt;
+    font-weight: medium;
+    color: rgba(0, 0, 0, 0.6);
+    text-align: left;
+    itml-text-max-lines: 1;
+    itml-position: center;
+    itml-align: left;
+    margin: 0 20;
+}
+
+.centerText {
+    text-align: center;
+}
+
+.interImageText {
+    font-size: 26pt;
+    font-weight: medium;
+    color: rgba(0, 0, 0, 0.6);
+    margin: 0 10;
+}
+
+.tallListItemLockup {
+    itml-item-height: 90;
+}
+
+.leftAligned {
+    itml-position: left;
+}
+
+.suggestionListLayout {
+    margin: -150 0;
+}
+
+.roundedImageCorners {
+    itml-img-treatment: corner-small;
+}
+
+.customBadgeLayout {
+    tv-tint-color: rgb(0, 0, 0);
+    margin: 0 0 5 0;
+}
+
+@media -tv-template and (-tv-uber) {
+    .darkBackgroundColor {
+        background-color: rgb(4, 27, 97);
+    }
+}
