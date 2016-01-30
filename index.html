@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>TVML Catalog by emadalam</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">TVML Catalog</h1>
+        <p class="header">Port of the original TVML Catalog Sample code re-written using atvjs</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/emadalam/tvml-catalog-using-atvjs/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/emadalam/tvml-catalog-using-atvjs/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/emadalam/tvml-catalog-using-atvjs">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/emadalam">emadalam</a></p>
+
+
+      </header>
+      <section>
+        <h1>
+<a id="tvml-catalog-using-atvjs-framework" class="anchor" href="#tvml-catalog-using-atvjs-framework" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>TVML Catalog: Using atvjs framework</h1>
+
+<p>This is a port of the original <a href="https://developer.apple.com/library/tvos/samplecode/TVMLCatalog/Introduction/Intro.html">TVML Catalog Sample Code</a> re-written using <a href="https://github.com/emadalam/atvjs">atvjs</a> framework. Refer to the framework documentation for its usage details.</p>
+
+<h3>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Getting Started</h3>
+
+<p>Assuming that you have <a href="https://nodejs.org/">nodejs</a> and <a href="https://www.npmjs.com/">npm</a> installed on your machine, do the following to get started:</p>
+
+<div class="highlight highlight-source-shell"><pre>$ npm install -g gulp karma-cli         <span class="pl-c"># Install Gulp and Karma globally</span>
+$ npm install                           <span class="pl-c"># Install dependencies</span></pre></div>
+
+<h3>
+<a id="development" class="anchor" href="#development" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Development</h3>
+
+<p>Builds the application and starts a webserver. By default the webserver starts at port 9001.</p>
+
+<div class="highlight highlight-source-shell"><pre>$ gulp</pre></div>
+
+<p>By default, it builds in debug mode.</p>
+
+<ul>
+<li>If you need to build in release mode, add <code>--type production</code> flag.</li>
+<li>You can define a port with <code>--port 8080</code> flag. (If you start the server on a different port, make sure to update the same in the native application)</li>
+<li>If you need to run tests while building/starting the application, add <code>--tests</code> flag.</li>
+<li>To run just the test suite, <code>gulp test</code> or <code>karma start</code>
+</li>
+</ul>
+
+<h3>
+<a id="structure" class="anchor" href="#structure" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Structure</h3>
+
+<p>The project is split into two parts:</p>
+
+<ul>
+<li>native: this directory contains the Xcode project and related files. The AppDelegate.swift file handles the setup of the TVMLKit framework and launching the JavaScript context to manage the application.</li>
+<li>web: this directory contains the JavaScript and TVML template files needed to render the application. The contents of this directory must be hosted on a server accessible from the device.</li>
+</ul>
+
+<h3>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h3>
+
+<p><a href="http://opensource.org/licenses/MIT">MIT License</a>.</p>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		          <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-44640221-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
