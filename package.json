@@ -59,6 +59,7 @@
     "webpack-stream": "2.1.1"
   },
   "dependencies": {
-    "atvjs": "0.0.1"
+    "atvjs": "0.0.1",
+    "handlebars": "^4.0.5"
   }
 }
