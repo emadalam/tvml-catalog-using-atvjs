@@ -21,9 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVApplicationControllerDe
 
     // MARK: UIApplication Overrides
     
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window = UIWindow(frame: UIScreen.main.bounds)
         
         /*
             Create the TVApplicationControllerContext for this application
@@ -40,15 +40,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVApplicationControllerDe
             This will allow for the resource to be retrieved and UI presented to
             the user quickly.
         */
-        if let javaScriptURL = NSURL(string: AppDelegate.TVBootURL) {
+        if let javaScriptURL = URL(string: AppDelegate.TVBootURL) {
             appControllerContext.javaScriptApplicationURL = javaScriptURL
         }
         
         appControllerContext.launchOptions["BASEURL"] = AppDelegate.TVBaseURL
         
-        if let launchOptions = launchOptions as? [String: AnyObject] {
-            for (kind, value) in launchOptions {
-                appControllerContext.launchOptions[kind] = value
+        if let options = launchOptions {
+            for (kind, value) in options {
+                appControllerContext.launchOptions[kind.rawValue] = value
             }
         }
 
@@ -59,23 +59,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVApplicationControllerDe
     
     // MARK: TVApplicationControllerDelegate
     
-    func appController(appController: TVApplicationController, didFinishLaunchingWithOptions options: [String: AnyObject]?) {
-        print("\(__FUNCTION__) invoked with options: \(options)")
+    func appController(_ appController: TVApplicationController, didFinishLaunching options: [String: Any]?) {
+        print("\(#function) invoked with options: \(options)")
     }
     
-    func appController(appController: TVApplicationController, didFailWithError error: NSError) {
-        print("\(__FUNCTION__) invoked with error: \(error)")
+    func appController(_ appController: TVApplicationController, didFail error: Error) {
+        print("\(#function) invoked with error: \(error)")
         
         let title = "Error Launching Application"
         let message = error.localizedDescription
-        let alertController = UIAlertController(title: title, message: message, preferredStyle:.Alert )
+        let alertController = UIAlertController(title: title, message: message, preferredStyle:.alert )
         
-        self.appController?.navigationController.presentViewController(alertController, animated: true, completion: { () -> Void in
+        self.appController?.navigationController.present(alertController, animated: true, completion: { () -> Void in
             // ...
         })
     }
     
-    func appController(appController: TVApplicationController, didStopWithOptions options: [String: AnyObject]?) {
-        print("\(__FUNCTION__) invoked with options: \(options)")
+    func appController(_ appController: TVApplicationController, didStop options: [String: Any]?) {
+        print("\(#function) invoked with options: \(options)")
     }
 }

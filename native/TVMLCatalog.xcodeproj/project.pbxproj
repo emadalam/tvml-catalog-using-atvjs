@@ -232,7 +232,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.atvjs.TVMLCatalog;
 				PRODUCT_NAME = "TVML Catalog";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -248,7 +248,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.atvjs.TVMLCatalog;
 				PRODUCT_NAME = "TVML Catalog";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
